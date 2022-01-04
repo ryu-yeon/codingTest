@@ -8,7 +8,5 @@ func solution(_ n:Int) -> Int {
     for i in str.reversed() {
         str2 += String(i)
     }
-    
-    
     return Int(str2, radix: 3)!
 }
