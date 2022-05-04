@@ -1,13 +1,8 @@
-let input = readLine()!.split(separator: " ")
-let people: Int = Int(input[0])!
-let N: Int = Int(input[1])!
+let input = readLine()!.split(separator: " ").map {Int($0)!}
+let people = input[0], N = input[1]
 
-var arr: [Int] = []
+var arr = (1...people).map{$0}
 var ans: [Int] = []
-
-for i in 1...people {
-    arr.append(i)
-}
 
 var n: Int = N - 1
 
@@ -28,4 +23,3 @@ for i in ans {
         print(i, terminator: ", ")
     }
 }
-
