@@ -13,12 +13,9 @@ if N == 1 {
     print(arr[0] * M)
 }
 
-for i in 1...M {
-    if i % K == 0 {
-        answer += arr[1]
-    } else {
-        answer += arr[0]
-    }
-}
+let count = M / (K + 1) * K + M % (K + 1)
+
+answer += count * arr[0]
+answer += (M - count) * arr[1]
 
 print(answer)
